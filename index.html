@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#120d18" />
+  <meta name="description" content="Invitación digital de cumpleaños" />
+  <title>Invitación de Agustina</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="ambient-glow ambient-glow--one" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--two" aria-hidden="true"></div>
+
+  <div id="loader" class="loader" role="dialog" aria-modal="true" aria-labelledby="loader-title">
+    <div class="loader__panel">
+      <div class="loader__mark" aria-hidden="true">♠</div>
+      <p class="eyebrow">UNA INVITACIÓN ESPECIAL</p>
+      <h1 id="loader-title" class="loader__title">Agustina</h1>
+      <p class="loader__copy">Esta invitación contiene música. Ajustá el volumen y tocá entrar para comenzar.</p>
+      <button id="enter-button" class="button button--primary button--wide" type="button">
+        <span>Entrar</span>
+        <span aria-hidden="true">✦</span>
+      </button>
+    </div>
+  </div>
+
+  <button id="music-toggle" class="music-toggle" type="button" aria-label="Pausar música" hidden>
+    <span class="music-toggle__icon" aria-hidden="true">♪</span>
+  </button>
+
+  <audio id="audio" preload="auto" loop>
+    <source src="https://raw.githubusercontent.com/DigitalRoss/invitacionMerlina/main/assets/audio/musica.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="page-shell">
+    <article class="invitation-card">
+      <section class="hero" aria-label="Portada de la invitación">
+        <div class="hero__backdrop"></div>
+        <div class="hero__shade"></div>
+
+        <div class="hero__characters" aria-hidden="true">
+          <img id="character-image" class="hero__character" src="https://raw.githubusercontent.com/DigitalRoss/invitacionMerlina/main/assets/img/character-1.png" alt="" />
+        </div>
+
+        <div class="hero__content">
+          <p class="eyebrow reveal">ESTÁS INVITADO</p>
+          <h1 id="guest-name" class="hero__name reveal">Agustina</h1>
+          <p id="age-label" class="hero__age reveal">CUMPLE 10 AÑOS</p>
+        </div>
+      </section>
+
+      <section class="content-section intro-section reveal">
+        <p id="invitation-message" class="intro-message">¿Le temes a divertirte un montón? ¡Te espero!</p>
+        <div class="portrait-wrap">
+          <img id="portrait" class="portrait" src="https://raw.githubusercontent.com/DigitalRoss/invitacionMerlina/main/assets/img/foto1.png" alt="Foto de Agustina" />
+        </div>
+      </section>
+
+      <section class="content-section event-section reveal">
+        <p class="section-kicker">LA CITA ES</p>
+
+        <div class="date-card">
+          <p id="event-date" class="date-card__date">Sábado 18 de Octubre</p>
+          <div class="date-card__line"></div>
+          <p id="event-time" class="date-card__time">16:00 a 20:00 hs.</p>
+        </div>
+
+        <section class="countdown-card" aria-labelledby="countdown-title">
+          <p class="countdown-card__eyebrow">CUENTA REGRESIVA</p>
+          <h2 id="countdown-title" class="countdown-card__title">Falta muy poco</h2>
+
+          <div id="countdown" class="countdown" aria-live="polite">
+            <div class="countdown__unit">
+              <span id="countdown-days" class="countdown__value">00</span>
+              <span class="countdown__label">Días</span>
+            </div>
+            <div class="countdown__separator" aria-hidden="true">:</div>
+            <div class="countdown__unit">
+              <span id="countdown-hours" class="countdown__value">00</span>
+              <span class="countdown__label">Hs</span>
+            </div>
+            <div class="countdown__separator" aria-hidden="true">:</div>
+            <div class="countdown__unit">
+              <span id="countdown-minutes" class="countdown__value">00</span>
+              <span class="countdown__label">Min</span>
+            </div>
+            <div class="countdown__separator" aria-hidden="true">:</div>
+            <div class="countdown__unit countdown__unit--seconds">
+              <span id="countdown-seconds" class="countdown__value">00</span>
+              <span class="countdown__label">Seg</span>
+            </div>
+          </div>
+
+          <p id="countdown-status" class="countdown-card__status"></p>
+        </section>
+
+        <div class="location-block">
+          <p class="location-block__kicker">TE ESPERO EN</p>
+
+          <div class="location-card">
+            <div class="location-card__icon" aria-hidden="true">⌖</div>
+            <div>
+              <p id="event-venue" class="location-card__venue">Paloko Bowling</p>
+              <p id="event-address" class="location-card__address">Av. San Martín 2269, CABA</p>
+            </div>
+          </div>
+        </div>
+
+        <a id="map-button" class="button button--secondary button--wide" href="#" target="_blank" rel="noopener noreferrer">
+          <span>Cómo llegar</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <section class="content-section dress-section reveal">
+        <p class="section-kicker">DRESS CODE</p>
+        <div class="dress-card">
+          <span class="dress-card__symbol" aria-hidden="true">♠</span>
+          <p id="dress-code" class="dress-card__text">Ven vestido de negro.</p>
+          <span class="dress-card__symbol" aria-hidden="true">♠</span>
+        </div>
+      </section>
+
+      <section class="content-section confirmation-section reveal">
+        <p class="section-kicker">CONFIRMACIÓN</p>
+        <h2 class="section-title">¿Venís?</h2>
+        <p class="section-copy">Confirmá tu asistencia por WhatsApp.</p>
+
+        <a id="whatsapp-button" class="button button--whatsapp button--wide" href="#" target="_blank" rel="noopener noreferrer">
+          <span class="button__emoji" aria-hidden="true">📱</span>
+          <span>Confirmar asistencia</span>
+        </a>
+      </section>
+
+      <footer class="footer">
+        <p>Diseñado por <a id="instagram-link" href="https://www.instagram.com/rossdigitalstudio/" target="_blank" rel="noopener noreferrer">@rossdigitalstudio</a></p>
+      </footer>
+    </article>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
