@@ -11,7 +11,7 @@ window.INVITATION_CONFIG = {
     address: "Av. San Martín 2269, CABA",
     mapUrl: "https://maps.app.goo.gl/LnZVf7kF9egGp7Lk8",
     dressCode: "Ven vestido de negro.",
-    whatsappNumber: "5491156223007",
+    whatsappNumber: "",
     whatsappMessage: "¡Hola! Confirmo mi asistencia al cumpleaños de Agustina. 🖤",
     instagramUrl: "https://www.instagram.com/rossdigitalstudio/",
     instagramHandle: "@rossdigitalstudio"
